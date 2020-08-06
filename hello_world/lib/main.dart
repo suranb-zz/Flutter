@@ -13,13 +13,13 @@ void main() {
           ),
           body: Center(
             child: Image(
-              image: NetworkImage(
-                  'https://images.unsplash.com/photo-1528660544347-95a93c58e424?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80'),
+              image: AssetImage('images/Diamond.png'),
             ),
           )),
     ),
   );
 }
+
 /*
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
