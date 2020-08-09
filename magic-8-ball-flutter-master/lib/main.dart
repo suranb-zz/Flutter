@@ -7,7 +7,6 @@ void main() => runApp(
       ),
     );
 
-
 class BallPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -15,7 +14,7 @@ class BallPage extends StatelessWidget {
       backgroundColor: Colors.blue.shade400,
       appBar: AppBar(
         title: Center(
-          child: Text('Ask me anything'),
+          child: Text('Stateless Widget'),
         ),
         backgroundColor: Colors.blue.shade900,
       ),
@@ -23,7 +22,6 @@ class BallPage extends StatelessWidget {
     );
   }
 }
-
 
 class Ball extends StatefulWidget {
   @override
