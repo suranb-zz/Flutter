@@ -25,6 +25,11 @@ class QuizBrain{
     }
   }
 
+  bool lastQuestion(){
+    return _questionNumber >= 13 ? true : false;
+  }
+
+
   String getQuestionText(){
     return _questionBank[_questionNumber].questionText;
   }
