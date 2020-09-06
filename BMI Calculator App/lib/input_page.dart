@@ -28,31 +28,19 @@ class _InputPageState extends State<InputPage> {
                 Expanded(
                   child: ReusableCard(
                     colour: activeCardColour,
-                    cardChild: Column(
-                      children: [
-                        Icon(
-                          FontAwesomeIcons.mars,
-                          size: 80.0,
-                        ),
-                        SizedBox(
-                          height: 15.0,
-                        ),
-                        Text(
-                          'MALE',
-                          style: TextStyle(
-                            fontSize: 18,
-                            color: Color(
-                              0xFF8D8E98,
-                            ),
-                          ),
-                        ),
-                      ],
+                    cardChild: IconContent(
+                      label: 'MALE',
+                      icon: FontAwesomeIcons.mars,
                     ),
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
                     colour: activeCardColour,
+                    cardChild: IconContent(
+                      label: 'FEMALE',
+                      icon: FontAwesomeIcons.venus,
+                    ),
                   ),
                 ),
               ],
@@ -87,6 +75,36 @@ class _InputPageState extends State<InputPage> {
           ),
         ],
       ),
+    );
+  }
+}
+
+class IconContent extends StatelessWidget {
+  const IconContent({this.label, this.icon});
+
+  final IconData icon;
+  final String label;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Icon(
+          icon,
+          size: 80.0,
+        ),
+        SizedBox(
+          height: 15.0,
+        ),
+        Text(
+          label,
+          style: TextStyle(
+            fontSize: 18,
+            color: Color(0xFF8D8E98),
+          ),
+        ),
+      ],
     );
   }
 }
